@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Showcase Event</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1b2838;
+            color: #c7d5e0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #171a21;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #66c0f4;
+        }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 2.5em;
+            color: #66c0f4;
+            margin-bottom: 20px;
+        }
+
+        .date-time {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+
+        .cta-button {
+            background-color: #66c0f4;
+            color: #1b2838;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #4a9fc5;
+        }
+
+        footer {
+            background-color: #171a21;
+            padding: 20px;
+            text-align: center;
+            color: #c7d5e0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Steam Showcase Event</h1>
+    </header>
+
+    <div class="content">
+        <h2>Join Us for an Epic Gaming Experience!</h2>
+        <p class="date-time">Date: TBD<br>Time: TBD</p>
+        <p class="description">
+            Prepare yourself for an exciting Steam Showcase where the latest and greatest games will be on display. 
+            Whether you're a fan of indie titles, big-budget blockbusters, or innovative new concepts, this event is 
+            the place to be. Stay tuned for more details and mark your calendars for an event you won't want to miss!
+        </p>
+        <a href="#" class="cta-button">Stay Updated</a>
+    </div>
+
+    <footer>
+        &copy; 2024 Steam Showcase. All rights reserved.
+    </footer>
+</body>
+
+</html>
