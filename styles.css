@@ -53,17 +53,17 @@ nav {
 #title-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align to the left */
     justify-content: center;
-    margin-left: 2rem; /* Adjust this value to move to the right */
+    margin-right: auto; /* Pushes the title to the left */
 }
 
 #title {
     color: white;
     font-family: "Ibarra Real Nova", serif;
-    text-align: center; /* Center text alignment */
-    position: relative; /* Changed from absolute to relative */
-    transform: translateY(-50%); /* Center vertically */
+    text-align: center;
+    position: relative;
+    transform: translateY(-50%);
 }
 
 .name-line {
@@ -75,12 +75,13 @@ nav {
 
 /* Typewriter Effect */
 .typewriter h1 {
+    font-size: 40px;
     color: white;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid white; /* The typewriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
     animation: 
         typing 4s steps(40, end),
         blink-caret 2s step-end infinite;
@@ -100,9 +101,11 @@ nav {
 
 /* ASCII Text */
 #ascii-container {
+    position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Aligns ASCII art to the right */
     align-items: center;
+    margin-left: auto; /* Pushes the ASCII container to the right */
 }
 
 #ascii-container pre {
