@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Lai - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="center-container">
+        <h1 id="title" class="scroll-animate animate__animated animate__bounceInDown">
+            <span class="name-line">Who Is Caleb Lai?</span>
+        </h1> 
+        <button class="button-86" id="animateButton">Click To See More</button>
+    </div>
+
+    <script>
+        const title = document.getElementById('title');
+        const button = document.getElementById('animateButton');
+
+        button.addEventListener('click', () => {
+            title.classList.add('animate__hinge'); // Add the hinge animation
+        });
+
+        title.addEventListener('animationend', (event) => {
+            if (event.animationName === 'hinge') { // Check if the hinge animation ended
+                title.classList.add('animate__zoomInUp'); // Add the hinge animation
+                title.innerHTML = '<div class="centered-text">He is a <br>Software and<br> Web developer</div>';
+            }
+        });
+    </script>
+</body>
+</html>

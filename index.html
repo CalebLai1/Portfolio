@@ -18,17 +18,6 @@
         </ul>
     </nav>
 
-    <div id="content-container">
-        <div id="title-container">
-            <h1 id="title" class="scroll-animate animate__animated animate__fadeInLeft">
-                <span class="name-line">Caleb</span>
-                <span class="name-line">Lai</span>
-            </h1>
-        </div>
-        <div class="typewriter">
-            <h1 id="rotating-text"></h1>
-        </div>
-
         <div id="ascii-container">
             <pre class="scroll-animate animate__animated animate__fadeInRight">
                                                                                                      
@@ -90,8 +79,20 @@
                                                                                      
 </pre>
 </div>
-</div>
-
+<div id="content-container">
+    <div id="title-container">
+        <h1 id="title" class="scroll-animate animate__animated animate__fadeInLeft">
+            <span class="name-line">Caleb</span>
+            <span class="name-line">Lai</span>
+        </h1>
+    </div>
+    
+    <div class="typewriter-container">
+        <div class="typewriter">
+            <h1 id="rotating-text">Web Developer</h1>
+        </div>
+    </div>
+    
 <script>
 // Intersection Observer to trigger animations
 const observer = new IntersectionObserver((entries) => {
@@ -107,6 +108,9 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.scroll-animate').forEach((element) => {
     observer.observe(element);
 });
+
+
+
 
 // Typewriter effect
 const titles = ["Web Developer", "Tutor", "Physical Therapist Assistant", "Aspiring Neurosurgeon"];
