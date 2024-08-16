@@ -1,129 +1,113 @@
-/* Title */
-#title-container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(20, 20, 20);
-    position: relative;
-    overflow: hidden;
-}
-
-#title {
-    color: white;
-    font-size: 4rem;
-    font-family: "Ibarra Real Nova", serif;
-    text-align: center;
-    transition: transform 1s ease;
-    font-size: 120px;
-}
-
 /* Body */
 body {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(20, 20, 20); /* Set the background color */
     margin: 0;
     overflow-x: hidden;
 }
 
-/* Menu */
-#menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-    opacity: 0;
-    transform: translateY(100vh);
-    transition: opacity 1s ease, transform 1s ease, height 1s ease;
-    height: 0; 
-}
-
-.menu-item {
-    color: white;
-    font-size: clamp(3rem, 8vw, 8rem);
-    font-family: "Ibarra Real Nova", serif;
-    display: block;
-    text-decoration: none;
-    padding: clamp(0.25rem, 0.5vw, 1rem) 0;
-    transition: opacity 400ms ease, transform 400ms ease;
-}
-
-#menu-items:hover > .menu-item {
-    opacity: 0.3;
-    transform: scale(0.5);
-}
-
-#menu-items:hover > .menu-item:hover {
-    opacity: 1;
-    transform: scale(1.75);
-}
-
-#menu-items {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-/* Menu Logos */
-#menu-logos {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 2rem; 
-    z-index: 1;
-}
-
-.menu-logo {
-    width: 15vw;
-    margin: 1rem 0;
-    transition: opacity 400ms ease;
-}
-
-#menu-logos:hover > .menu-logo {
-    opacity: 0.3;
-}
-
-#menu-logos:hover > .menu-logo:hover {
-    opacity: 1;
-}
-
-h1, h2 {
-    color: white;
-    font-family: "Ibarra Real Nova", serif;
-    text-align: center;
-    margin: 2rem 0;
-}
-
-table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    color: white;
-    font-family: "Ibarra Real Nova", serif;
-}
-
-th, td {
+/* Navigation Bar */
+nav {
+    background-color: rgb(20, 20, 20);
     padding: 1rem;
-    border: 1px solid white;
-    text-align: left;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-ul {
-    list-style-type: disc;
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 1rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-family: "Ibarra Real Nova", serif;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #f0a500;
+}
+
+/* Content Container */
+#content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure space between name and ASCII art */
+    height: 100vh;
+    padding: 0 2rem; /* Add padding to the sides */
+}
+
+/* Title */
+#title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem; /* Adjust this value to move to the right */
+}
+
+#title {
     color: white;
     font-family: "Ibarra Real Nova", serif;
-    margin: 1rem auto;
-    padding: 0 2rem;
+    text-align: center; /* Center text alignment */
+    position: relative; /* Changed from absolute to relative */
+    transform: translateY(-50%); /* Center vertically */
 }
 
-li {
+.name-line {
+    display: block;
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 1;
     margin-bottom: 0.5rem;
 }
 
-p {
+/* Typewriter Effect */
+.typewriter h1 {
     color: white;
-    font-family: "Ibarra Real Nova", serif;
-    text-align: center;
-    margin: 1rem 2rem;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+        typing 4s steps(40, end),
+        blink-caret 2s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+
+/* ASCII Text */
+#ascii-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ascii-container pre {
+    color: white;
+    font-family: monospace;
+    font-size: 1rem;
+    white-space: pre;
 }

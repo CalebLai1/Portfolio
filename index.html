@@ -3,27 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STEAM Showcase 2024 - Home</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="scrollAnimation.js"></script>
+    <title>Caleb Lai - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <div id="title-container">
-        <div id="title">2024 D128 STEAM Showcase</div>
-    </div>
-    <div id="menu">
-        <div id="menu-logos">
-            <a href="https://www.d128.org/" target="_blank">
-                <img src="logo1.png" alt="Logo 1" class="menu-logo">
-            </a>
-            <a href="https://www.d128.org/vhhs" target="_blank">
-                <img src="logo2.png" alt="Logo 2" class="menu-logo">
-            </a>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="content-container">
+        <div id="title-container">
+            <h1 id="title" class="scroll-animate animate__animated animate__fadeInLeft">
+                <span class="name-line">Caleb</span>
+                <span class="name-line">Lai</span>
+            </h1>
         </div>
-        <div id="menu-items">
-            <a href="home.html" class="menu-item">Home</a>
-            <a href="about.html" class="menu-item">About</a>
-            <a href="contact.html" class="menu-item">Contact Us</a>
+        <div class="typewriter">
+            <h1 id="rotating-text"></h1>
         </div>
-    </div>
-   
+
+        <div id="ascii-container">
+            <pre class="scroll-animate animate__animated animate__fadeInRight">
+                                                                                                     
+                           =@@@@@@@@@@@@@@@@@@@                                      
+                         @@@@@@@@@:@@@@@@@@@@@@@@@*                                  
+                       #@@@@*:-%@%#**@@@@@%*@@@@@@@@@@=                              
+                       @@@:#=:::::.:-::-::=**##%%=#@@@@@                             
+                    %@@@@*+:..::.-==-:::-=-:.:--=*#%*%@@%                            
+                 @@@@@@%*%+:. -*%#*+=:.:--=-::. .:=+#@@@@@%                          
+               *@@@@%+@%##**==*+= -===-::--=-:...::==*%:@@@#                         
+               @@@=@%**==-==+*=::=++=::.----:..... .:-=+#:@@%                        
+              #@@##+=--:...:::..:---.:::::::...:-=++=--===-@@@%                      
+            #@@@-%*-... .. ..  .::-:::.:-=+**=-::--=---=:-+=@@@*                     
+            @@@:*=:  ... .:::.::--:::=+****#%@@#=:::::=+++=+#=@@@*                   
+            @@*#-::..   .:::::==+*****=======*%%**+=:-=**+=-==:@@@                   
+           *@@:=.:::::::--:::=**###+=--====---=**##%##+::=:::--:@@@                  
+          @@@:=:...::-===-:-=+***=====++===+===++****%%*::--::==+@@                  
+          @@=+-:. ::::====--=*+====+**+======-:::--==+%@*:::-:=*=@@                  
+          @@%+-::.::.:======++-:::---:::===--::.::::-=+%@+.:=+*.%@@                  
+          +@@=-..:-.:=++=++++=:::-:::...::::-::::::::-=*@%==@=%@@@@                  
+           +@@:=::--=*#**##*====+=-::::..:::-==-:::::::=%@#+*@@@#                    
+            =@@-:-=#%%%*+=--==+++==:::::::::::.:----:.::=@#:@@%                      
+             =@@.:+@#*=:.:==-=-:::--::. ....::.:-===++=--%@@@+                       
+             %@@=:*@+: . :=*#####*+:.:-:::::: ::--==-::--*@@@                        
+            %@@@@%*%=.  ..::===-:::....::::: .:*@@%***+:::@@@                        
+            @@@:+#*=+....:====*%@%*=:.:-=--::.+%@%#:=:=:..%@@                        
+            %@@::.-:+::::-::::=.:==:--***=--=:=#%%@=**=:.:@@%                        
+             @@%:.-:=-:.:-====*%@%+-.=+:=:..:-:*@@*--=::::@@                         
+             *@@%-::==-:...:::::::.:==:==....:-.::::::...-@@                         
+              #@@*:-:--::.. ...:...:=:::.....:-: .. .....-@@                         
+               %@@#=::::........ ..==:::.:::::=:.  ....:::@@                         
+                %@@@%:-:.   .....::+::-:.::--:=-..  ..:.:@@@                         
+                 %@@@@:::. ...... :=::::::::: :-:.. .:.::@@%                         
+                   *@@-::.......:::-:.:::::::::-:::..:.:=@@                          
+                    @@@:::....:::::::..:....: :::::..:::@@@                          
+                    *@@+::. ..::.:---::::::::::-::.::::@@@*                          
+                     @@*-::..   .:===-::::::::::-:....@@@%                           
+                  %@@@@=:-:::....:=::::::::::::::::.:=@@@                            
+               %@@@@@@%:..:::::::::----::..:::::..:=#*@@@@@@#                        
+            @@@@@@@%+:::....::::...  ...:::.......+%*-:@@@@@@@@@@                    
+        @@@@@@@@@:-*%- ..  ..  ................ .:%#:::. .=@@@@@@@@@%                
+    #@@@@@@@@@::.:::##:.........    ..:.::::....::%%.:.... ....@@@@@@@@@@@@=         
+ @@@@@@@@%::....:..::%#:........::.. .::::::..::..%@::: .:. .: :: -@@@@@@@@@@@       
+ @@@@@:.::::::.  ....:##-............   .   ..:...#@:.:.. :.. :.::.....::#@@@@@      
+ #:::.:::.:--::...... :#%=......  . ....... .: :.:#@-.::...:.  ::.:: .....::@@@@+    
+ ..:==:.:::.-=-::::. ..:*%*:.::::...    . .:. ::::%@:.:: ...:. ..: ::      ..@@@@@   
+ =:. :==- ==:.====-:.  . -**=.::. ....   .:: .::::%%.::...:.... ..: ::...... .*@@@@% 
+ ==-.:::==- =+::-==+=-.. ::=**=:::::::.:..:...:.:-@* ::. :::....  .: ::...... .:@@@@ 
+ =::=:::.:===.=+: ::===:. . :=+==:-:.. ...::::::.#@-::: .:.:: .. ..::.:.  ......:-@@ 
+ .==:-:...:.-+-:==:...---...:.-++**=.:....:::.::=@*.:: .:.: :: .   .::.: . .  ...::@ 
+ +=.=-.:. ..:.--.-=:.::::::..::.:*%@%=.-::::-=-=@%:::. .. .: :: .  ..:.::.... :. :.: 
+ .-=:==....:.::.::-=:::::::. ...:::*@@@+:=+*+-+@@-.::. :..... :. .  ..:.: :...:..:.. 
+ :::=:-=: ..::.:::::=::::::.: :. ::.:=%@@*: =@@%-.:::: :... .. :. .  .:.::.: .:..:.  
+ =:::--:=:::.::::::::=:::....:::..:--:.=@@@@@@*:::.:.- :..   ...:.......::.. .:::..  
+ =-.:::::=::-:.:::::::=::::. :::- :.-=-==:-++-.:::.:.:.: . .. :..:.. ..:.:...::::... 
+ :=::::::-=::--:::..:::=::-:..:.:- :::-::..::....: :::.: . . . :... .....:.:.::.. .. 
+ .:=::.:::=::::-::...:.:=-.-:..: -: :: : :-:.-:.:...:..: . . ...:.....::.::..::  ... 
+  .:=:-::::=:::.::......:=-.:: ::.::.--.-===-:.::...:...... . ..:...:::::::.::...... 
+                                                                                     
+</pre>
+</div>
+</div>
+
+<script>
+// Intersection Observer to trigger animations
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add(entry.target.dataset.animationIn);
+        } else {
+            entry.target.classList.remove(entry.target.dataset.animationIn);
+        }
+    });
+});
+
+document.querySelectorAll('.scroll-animate').forEach((element) => {
+    observer.observe(element);
+});
+
+// Typewriter effect
+const titles = ["Web Developer", "Tutor", "Physical Therapist Assistant", "Aspiring Neurosurgeon"];
+let currentIndex = 0;
+let typingTimeout;
+
+function typeWriter() {
+    const rotatingTextElement = document.getElementById('rotating-text');
+    rotatingTextElement.textContent = titles[currentIndex];
+    rotatingTextElement.style.animation = 'none';
+    rotatingTextElement.offsetHeight; // Trigger reflow
+    const typingDuration = titles[currentIndex].length / 10; // Adjust typing speed based on length
+    rotatingTextElement.style.animation = `typing ${typingDuration}s steps(${titles[currentIndex].length}, end), blink-caret 2s step-end infinite`;
+    currentIndex = (currentIndex + 1) % titles.length;
+    clearTimeout(typingTimeout);
+    typingTimeout = setTimeout(typeWriter, (typingDuration + 0.5) * 1000); // Adjust delay based on title length and pause
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    typeWriter();
+});
+</script>
+</body>
+</html>
