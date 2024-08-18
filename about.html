@@ -6,6 +6,11 @@
     <title>Caleb Lai - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -17,28 +22,57 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-
     <div class="center-container">
         <h1 id="title" class="scroll-animate animate__animated animate__bounceInDown">
-            <span class="name-line">Who Is Caleb Lai?</span>
+            <span class="name-line">About <br> Caleb Lai</span>
         </h1> 
         <button class="button-86" id="animateButton">Click To See More</button>
+        <div id="moreText" class="hidden animate__animated"></div>
     </div>
 
     <script>
-        const title = document.getElementById('title');
         const button = document.getElementById('animateButton');
+        const title = document.getElementById('title');
+        const moreText = document.getElementById('moreText');
+        const texts = [
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">He is <br> a Competent <br> Web Developer</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">A Novice <br> Software Engineer</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">A Physical Therapy <br> Assistant</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">A Tutor at School</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">And For <br> Impoverished Kids</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">He is <br> a Family Orientated <br> Person</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">And a High <br> Honor Roll <br> Student</span></h1></div>'
+        ];
+        let currentIndex = 0;
 
         button.addEventListener('click', () => {
-            title.classList.add('animate__hinge'); // Add the hinge animation
+            if (currentIndex === 0) {
+                title.classList.add('animate__hinge');
+            } else {
+                moreText.classList.remove('animate__zoomInUp');
+                moreText.classList.add('animate__hinge');
+            }
         });
 
         title.addEventListener('animationend', (event) => {
-            if (event.animationName === 'hinge') { // Check if the hinge animation ended
-                title.classList.add('animate__zoomInUp'); // Add the hinge animation
-                title.innerHTML = '<div class="centered-text">He is a <br>Software and<br> Web developer</div>';
+            if (event.animationName === 'hinge') {
+                title.classList.add('hidden');
+                showNextText();
             }
         });
+
+        moreText.addEventListener('animationend', (event) => {
+            if (event.animationName === 'hinge') {
+                showNextText();
+            }
+        });
+
+        function showNextText() {
+            moreText.classList.remove('hidden', 'animate__hinge');
+            moreText.classList.add('animate__zoomInUp');
+            moreText.innerHTML = texts[currentIndex];
+            currentIndex = (currentIndex + 1) % texts.length;
+        }
     </script>
 </body>
 </html>

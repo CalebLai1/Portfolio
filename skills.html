@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Lai - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="center-container">
+        <h1 id="title" class="scroll-animate animate__animated animate__bounceInDown">
+            <span class="name-line">Caleb Lai's <br> Skills</span>
+        </h1> 
+        <button class="button-86" id="animateButton">Click To See More</button>
+        <div id="moreText" class="hidden animate__animated"></div>
+    </div>
+
+    <script>
+        const button = document.getElementById('animateButton');
+        const title = document.getElementById('title');
+        const moreText = document.getElementById('moreText');
+        const texts = [
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">Bilingual<br>Spanish & English</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">Competent in<br>HTML</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">Proficient in<br>Java</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">Skilled in<br>Python</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">And For <br> Impoverished Kids</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">Experienced with<br>React</span></h1></div>',
+            '<div class="center-container"><h1 id="title" class="scroll-animate animate__animated animate__bounceInDown"><span class="name-line">Mastered Physical <br> Therapy Assitance</span></h1></div>'
+        ];
+        let currentIndex = 0;
+
+        button.addEventListener('click', () => {
+            if (currentIndex === 0) {
+                title.classList.add('animate__hinge');
+            } else {
+                moreText.classList.remove('animate__zoomInUp');
+                moreText.classList.add('animate__hinge');
+            }
+        });
+
+        title.addEventListener('animationend', (event) => {
+            if (event.animationName === 'hinge') {
+                title.classList.add('hidden');
+                showNextText();
+            }
+        });
+
+        moreText.addEventListener('animationend', (event) => {
+            if (event.animationName === 'hinge') {
+                showNextText();
+            }
+        });
+
+        function showNextText() {
+            moreText.classList.remove('hidden', 'animate__hinge');
+            moreText.classList.add('animate__zoomInUp');
+            moreText.innerHTML = texts[currentIndex];
+            currentIndex = (currentIndex + 1) % texts.length;
+        }
+    </script>
+</body>
+</html>

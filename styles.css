@@ -210,3 +210,7 @@ nav {
     margin: 0; /* Remove any default margin */
     padding: 0; /* Remove any default padding */
 }
+
+.white-text {
+    color: white;
+}
